@@ -13,9 +13,7 @@ Lista de tarefas em Javascript puro e com uso do localStorage para armazenar e p
 - Versionado com Git
 
 ### Preview 
-https://raw.githubusercontent.com/alessandradocouto/ListaDeTarefas/master/preview_picture.png
-
-https://github.com/alessandradocouto/ListaDeTarefas/blob/master/preview_picture.png
+![Preview](https://raw.githubusercontent.com/alessandradocouto/ListaDeTarefas/master/preview_picture.png)
 
 
 ### Obrigada pela visita
