@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="https://www.alessandracouto.com">
+    <meta name="description" content="lista de tarefas em Javascript puro e com uso do localStorage para armazenar e persistir com os itens da lista mesmo depois de fechar o navegador.">
+    <meta name="keywords" content="html5, css3, Lista Tarefas, list ToDo, Javascript, responsivo, Vanilla Script">
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="..., ..." />
+    <meta name="googlebot" content="..., ..." />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Tarefas</title>
+    <!-- fonts google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- meu css -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="content">
+            <h1 class="content-title">Lista de Tarefas</h1>
+            <div class="content-date"></div>
+            <form>
+                <label from="f-search"></label>
+                <input type="text" id="f-search" name="f-search" placeholder="Digite nova tarefa">
+                <button id="btn-search" type="button">Enter</button>
+            </form>
+            <div class="container">
+                <ul class="menu"></ul>
+            </div>
+            <div class="content-btn-clear">
+                <button id="btn-clear" type="button">Limpar</button>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
