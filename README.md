@@ -1,18 +1,21 @@
 # ListaDeTarefas
 Lista de tarefas em Javascript puro e com uso do localStorage para armazenar e persistir dados mesmo depois de fechar o navegador.
 
-## Projeto Online :boom
+## Projeto Online
 
+ https://alessandradocouto.github.io/ListaDeTarefas/
 
 ### Tecnologias
 
-HTML5
-CSS3
-JavaScript(Vanilla JS)
-Versionado com Git
+- HTML5
+- CSS3
+- JavaScript(Vanilla JS)
+- Versionado com Git
 
-### Gif Preview 
+### Preview 
+https://raw.githubusercontent.com/alessandradocouto/ListaDeTarefas/master/preview_picture.png
+
+https://github.com/alessandradocouto/ListaDeTarefas/blob/master/preview_picture.png
 
 
-
-#### Obrigada pela visita
+### Obrigada pela visita
