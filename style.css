@@ -17,7 +17,7 @@ body{
 
 .content{
     max-width: 100%;
-    min-height: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
