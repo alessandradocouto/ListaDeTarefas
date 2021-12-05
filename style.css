@@ -16,8 +16,8 @@ body{
 }
 
 .content{
-    width: 100%;
-    min-height: 100vh;
+    max-width: 100%;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
