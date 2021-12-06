@@ -17,7 +17,7 @@ body{
 
 .content{
     max-width: 100%;
-    min-height: 95vh;
+    min-height: 93vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
