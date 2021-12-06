@@ -24,12 +24,12 @@ window.addEventListener('resize', () => {
 // relogio
 function criarDataRelogio(){
     const nowDate = new Date();
-    const nowHour = nowDate.getHours(); // 22
-    const nowMinutes = nowDate.getMinutes(); // 38
-    const nowDayW = nowDate.getDay(); // 2 = terca
-    const nowDay = nowDate.getDate(); // 01 numerodia
-    const nowMonth = nowDate.getMonth(); // Month = 10, vai de 0 a 11 
-    const nowYear = nowDate.getFullYear(); // 2021
+    // nowDate.getHours(); // 22
+    // nowDate.getMinutes(); // 38
+    // nowDate.getDay(); // 2 = terca
+    // nowDate.getDate(); // 1 numerodia
+    // nowDate.getMonth(); // Month = 10, vai de 0 a 11 
+   // nowDate.getFullYear(); // 2021
 
     const dayName = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
     const monName = {0:"Janeiro", 1:"Fevereiro", 2:"Março", 3:"Abril", 4:"Maio", 5:"Junho", 6:"Julho", 7:"Agosto", 8:"Setembro", 9:"Outubro", 10:"Novembro", 11:"Dezembro"};
@@ -40,17 +40,17 @@ function criarDataRelogio(){
     // acrescentando zero à esquerda quando
     // os minutos foram menores que 10
     function zeroEsquerdaMinutos(){
-        let zeroMin = nowMinutes < 10 ? '0' + nowMinutes : nowMinutes;
+        let zeroMin = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
         return zeroMin;
     }
 
-    hourMin.textContent = nowHour + ':' + zeroEsquerdaMinutos();
+    hourMin.textContent = nowDate.getHours() + ':' + zeroEsquerdaMinutos();
     $contentDate.appendChild(hourMin);
 
     const dayMonth = document.createElement('p');
     dayMonth.setAttribute('class', 'dayMonth');
 
-    dayMonth.textContent = dayName[nowDayW] + ', ' + nowDay + ' de ' + monName[nowMonth] + ' de ' + nowYear;
+    dayMonth.textContent = dayName[nowDate.getDay()] + ', ' + nowDate.getDate() + ' de ' + monName[nowDate.getMonth()] + ' de ' + nowDate.getFullYear();
     $contentDate.appendChild(dayMonth);
 }
 
