@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    
+    min-height: 100vh;
     background: rgb(45,127,127);
     background: linear-gradient(90deg, rgba(45,127,127,1) 14%, rgba(36,162,118,1) 33%, rgba(72,168,106,1) 74%, rgba(101,225,106,1) 100%); 
 }
