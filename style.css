@@ -11,14 +11,13 @@ html{
 }
 
 body{
-    min-height: 100vh;
     background: rgb(45,127,127);
     background: linear-gradient(90deg, rgba(45,127,127,1) 14%, rgba(36,162,118,1) 33%, rgba(72,168,106,1) 74%, rgba(101,225,106,1) 100%); 
 }
 
 .content{
     max-width: 100%;
-    height: auto;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,7 +29,7 @@ body{
 
 .content-title{
     width: 100%;
-    padding: 0.6em;
+    padding: 0.7em;
     background-color: #2C2C2C;
     color: #DED849;
     font-weight: 400;
