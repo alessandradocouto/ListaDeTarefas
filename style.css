@@ -17,7 +17,7 @@ body{
 
 .content{
     max-width: 100%;
-    min-height: 95vh;
+    min-height: 99vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,6 +119,7 @@ form{
     border: 1px solid #919191;
     border-radius: 5px;
     box-shadow: 1px 1px 2px #161616;
+    cursor: move;
 }
 
 .btn-lixeira{
@@ -164,9 +165,9 @@ span{
 @media (min-width: 37.5em){
 
     .content{
-        max-width: 345px;
-        min-height: auto;
-        margin: 1em auto;
+        max-width: 400px;
+        min-height: 97vh;
+        margin: 0.5em auto;
     }
     
 }

@@ -93,8 +93,9 @@ function atualizarLocal(item){
     // item = button
     let booleanItem = true;
     localItem.forEach((element) => {
-        if(item.nextSibling.data === element['tarefa']){
-            if(item.classList.contains('feito')){
+        
+        if(item.firstChild.nextSibling.nodeValue === element['tarefa']){
+            if(item.firstChild.classList.contains('feito')){
                 element['id'] = booleanItem;
             }
             else{
@@ -106,7 +107,8 @@ function atualizarLocal(item){
 
 function personalizarItem(item) {
     // add ou remover a class feito
-    item.classList.toggle('feito');
+    // primeiro filho da li terá class
+    item.firstChild.classList.toggle('feito');
 }
 
 function delItem(item) {
@@ -150,7 +152,7 @@ $content.addEventListener('click', (event) => {
     if (clickedItem.id === 'btn-search' || clickedItem.id === 'f-search')
         addTarefa();
 
-    if (clickedItem.tagName === 'SPAN'){
+    if (clickedItem.tagName === 'LI'){
         personalizarItem(clickedItem);
         atualizarLocal(clickedItem);
         salvarLocal();
