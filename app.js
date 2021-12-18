@@ -2,6 +2,8 @@
 
 const $content = document.querySelector('.content');
 const $contentDate = document.querySelector('.content-date');
+const $hourMin = document.querySelector('.hourMin');
+const $dayMonth = document.querySelector('.dayMonth');
 const $menuTarefa = document.querySelector('.menu');
 const $inputText = document.querySelector('#f-search');
 const $btnSearch = document.querySelector('#btn-search');
@@ -13,34 +15,19 @@ const localItem = JSON.parse(localStorage.getItem('tarefa')) || [];
 // relogio
 function criarDataRelogio(){
     const nowDate = new Date();
-    // nowDate.getHours(); // 22
-    // nowDate.getMinutes(); // 38
-    // nowDate.getDay(); // 2 = terca
-    // nowDate.getDate(); // 1 numerodia
-    // nowDate.getMonth(); // Month = 10, vai de 0 a 11 
-   // nowDate.getFullYear(); // 2021
 
     const dayName = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
     const monName = {0:"Janeiro", 1:"Fevereiro", 2:"Março", 3:"Abril", 4:"Maio", 5:"Junho", 6:"Julho", 7:"Agosto", 8:"Setembro", 9:"Outubro", 10:"Novembro", 11:"Dezembro"};
-
-    const hourMin = document.createElement('p');
-    hourMin.setAttribute('class', 'hourMin');
     
     // acrescentando zero à esquerda quando
-    // os minutos foram menores que 10
-    function zeroEsquerdaMinutos(){
-        let zeroMin = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
-        return zeroMin;
+    // os horas e minutos foram menores que 10
+    function addZero(n){
+        return n < 10 ? '0' + n : n;
     }
 
-    hourMin.textContent = nowDate.getHours() + ':' + zeroEsquerdaMinutos();
-    $contentDate.appendChild(hourMin);
+    $hourMin.textContent = addZero(nowDate.getHours()) + ':' + addZero(nowDate.getMinutes());
 
-    const dayMonth = document.createElement('p');
-    dayMonth.setAttribute('class', 'dayMonth');
-
-    dayMonth.textContent = dayName[nowDate.getDay()] + ', ' + nowDate.getDate() + ' de ' + monName[nowDate.getMonth()] + ' de ' + nowDate.getFullYear();
-    $contentDate.appendChild(dayMonth);
+    $dayMonth.textContent = dayName[nowDate.getDay()] + ', ' + nowDate.getDate() + ' de ' + monName[nowDate.getMonth()] + ' de ' + nowDate.getFullYear();
 }
 
 
@@ -123,7 +110,7 @@ function salvarLocal() {
 }
 
 function removerLocal(item) {
-    console.log(item);
+    
     localItem.forEach((element, index) => {
         if(item.previousSibling.data === element['tarefa']){
             localItem.splice(index,1);
@@ -164,8 +151,15 @@ $content.addEventListener('click', (event) => {
         salvarLocal();
     }
 
-    if (clickedItem.id === 'btn-clear')
+    if (clickedItem.id === 'btn-clear'){
         apagarTarefa();
+        //console.log('this',this); 
+            // window
+        //console.log('e.target',event.target); 
+            // ultimo elemento que recebeu o evento
+        //console.log('e.currentTarget',event.currentTarget);
+            // elemento que recebeu o evento de fato
+    }
 
 });
 
@@ -189,5 +183,5 @@ localItem.forEach((element) => {
     $menuTarefa.appendChild(liLocal);        
 });
 
-// chama function criaDataRelogio e atualiza
-setTimeout(criarDataRelogio(),500);
+// chama criaDataRelogio e atualiza o relogio
+setInterval(function(){ criarDataRelogio();  }, 1000);
